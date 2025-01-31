@@ -1,0 +1,17 @@
+---
+apiVersion: featuremanagement.cloudbees.io/v1alpha1
+kind: flag
+
+flag: titleColors
+flagType: string
+description: 
+labels:
+  -  Hello
+
+availableValues:
+  - White
+  - Blue
+  - Green
+  - Yellow
+
+isPermanent: false

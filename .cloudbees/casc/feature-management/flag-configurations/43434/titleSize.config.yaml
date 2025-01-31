@@ -1,0 +1,21 @@
+---
+apiVersion: featuremanagement.cloudbees.io/v1alpha1
+kind: flag-configuration
+
+flag: titleSize
+
+enabled: true
+
+stickinessProperty: rox.distinct_id
+
+defaultValue:
+  - percentage: 25
+    option: 14
+  - percentage: 26
+    option: 18
+  - percentage: 24
+    option: 24
+  - percentage: 25
+    option: 12
+
+conditions: []

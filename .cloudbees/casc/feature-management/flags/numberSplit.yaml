@@ -1,0 +1,15 @@
+---
+apiVersion: featuremanagement.cloudbees.io/v1alpha1
+kind: flag
+
+flag: numberSplit
+flagType: number
+description: 
+labels:
+  -  Hello
+
+availableValues:
+  - 21
+  - 22
+
+isPermanent: false
