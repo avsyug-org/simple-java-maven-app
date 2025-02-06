@@ -11,3 +11,6 @@ conditions:
     - property:
         name: BetaUser
         operator: is-true
+    - anyOf:
+        - group:
+            id: d4b8b01e-bca7-41bc-5c06-ebba85162ae7

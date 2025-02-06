@@ -2,6 +2,6 @@
 apiVersion: featuremanagement.cloudbees.io/v1alpha1
 kind: flag-properties
 
-name: GregDelete
+name: feature-flag-enabled
 type: Boolean
-description: "123"
+description: "yes, feature flag is enabled"

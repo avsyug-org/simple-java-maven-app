@@ -14,3 +14,6 @@ conditions:
         operands:
             - aaa
             - sadasd
+    - property:
+        name: TestCP
+        operator: is-true

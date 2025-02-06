@@ -10,4 +10,17 @@ stickinessProperty: rox.distinct_id
 
 defaultValue: false
 
-conditions: []
+conditions:
+  - allOf:
+      - property:
+          name: rox.language
+          operator: in-array
+          operands:
+            - hello
+            - test
+      - anyOf:
+          - group:
+              id: 037f6846-2212-42ea-781f-dab5dee41e9e
+          - group:
+              id: d4b8b01e-bca7-41bc-5c06-ebba85162ae7
+    flagValue: true
