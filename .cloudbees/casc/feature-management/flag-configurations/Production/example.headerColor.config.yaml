@@ -1,0 +1,18 @@
+---
+apiVersion: featuremanagement.cloudbees.io/v1alpha1
+kind: flag-configuration
+
+flag: example.headerColor
+
+enabled: true
+
+stickinessProperty: rox.distinct_id
+
+defaultValue: is-white
+
+conditions:
+  - allOf:
+      - flag:
+          name: example.headerWidth
+          value: "100"
+    flagValue: is-dark

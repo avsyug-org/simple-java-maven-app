@@ -1,0 +1,16 @@
+---
+apiVersion: featuremanagement.cloudbees.io/v1alpha1
+kind: target-group
+
+name: targetGroup2
+
+description: Occasional users for upsell opportunity
+
+conditions:
+  allOf:
+    - property:
+        name: Monthlysubscription
+        operator: is-true
+    - property:
+        name: FirstTimeUser
+        operator: is-true

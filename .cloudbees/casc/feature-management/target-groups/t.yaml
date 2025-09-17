@@ -1,0 +1,13 @@
+---
+apiVersion: featuremanagement.cloudbees.io/v1alpha1
+kind: target-group
+
+name: t
+
+description: 
+
+conditions:
+  allOf:
+    - property:
+        name: rox.app.release
+        operator: is-undefined

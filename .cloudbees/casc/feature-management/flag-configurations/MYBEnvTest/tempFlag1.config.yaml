@@ -1,0 +1,29 @@
+---
+apiVersion: featuremanagement.cloudbees.io/v1alpha1
+kind: flag-configuration
+
+flag: tempFlag1
+
+enabled: false
+
+stickinessProperty: rox.distinct_id
+
+defaultValue: false
+
+conditions:
+  - allOf:
+      - property:
+          name: Premium
+          operator: is-false
+    flagValue: true
+  - allOf:
+      - anyOf:
+          - group:
+              name: targetGroup1
+          - group:
+              name: targetGroup2
+    flagValue:
+      - percentage: 55
+        option: true
+      - percentage: 45
+        option: false

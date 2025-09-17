@@ -1,0 +1,15 @@
+---
+apiVersion: featuremanagement.cloudbees.io/v1alpha1
+kind: flag
+
+flag: example.headerColor
+flagType: string
+description: 
+labels:
+
+availableValues:
+  - myFreeTextValue
+  - is-white
+  - is-dark
+
+isPermanent: false

@@ -1,0 +1,7 @@
+---
+apiVersion: featuremanagement.cloudbees.io/v1alpha1
+kind: flag-properties
+
+name: FirstTimeUser
+type: Boolean
+description: "First time users are provided onboarding information, and upgrade information."

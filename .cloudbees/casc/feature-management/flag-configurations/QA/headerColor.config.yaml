@@ -1,0 +1,42 @@
+---
+apiVersion: featuremanagement.cloudbees.io/v1alpha1
+kind: flag-configuration
+
+flag: headerColor
+
+enabled: true
+
+stickinessProperty: rox.distinct_id
+
+defaultValue:
+  valueWrittenInCode: true
+
+conditions:
+  - allOf:
+      - property:
+          name: rox.app.release
+          operator: is-undefined
+      - property:
+          name: Premium
+          operator: is-true
+      - anyOf:
+          - group:
+              id: c748c429-eec8-4826-ae34-29f9e0bd40c7
+      - flag:
+          name: example.show
+          value: "true"
+      - property:
+          name: Monthlysubscription
+          operator: is-true
+      - property:
+          name: Internalusers
+          operator: in-array
+          operands:
+            - "true"
+      - property:
+          name: rox_app_release2
+          operator: before
+          operands:
+            - "2020-12-01T05:00:00.000Z"
+    flagValue:
+      valueWrittenInCode: true

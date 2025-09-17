@@ -1,0 +1,38 @@
+---
+apiVersion: featuremanagement.cloudbees.io/v1alpha1
+kind: flag-configuration
+
+flag: example.headerColor
+
+enabled: true
+
+stickinessProperty: rox.distinct_id
+
+defaultValue:
+  valueWrittenInCode: true
+
+conditions:
+  - allOf:
+      - property:
+          name: rox.app.release
+          operator: is-undefined
+      - anyOf:
+          - group:
+              id: c748c429-eec8-4826-ae34-29f9e0bd40c7
+      - flag:
+          name: default.headerColor
+          value: "true"
+      - property:
+          name: rox_app_release2
+          operator: is-undefined
+      - anyOf:
+          - group:
+              id: e5bea12d-5961-456e-a898-198b531a9503
+      - not:
+          allOf:
+            - group:
+                id: 185a8426-54eb-4f48-902f-d81e60dc797d
+      - property:
+          name: FirstTimeUser
+          operator: is-true
+    flagValue: myFreeTextValue

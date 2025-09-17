@@ -1,0 +1,19 @@
+---
+apiVersion: featuremanagement.cloudbees.io/v1alpha1
+kind: flag-configuration
+
+flag: tempFlag1
+
+enabled: true
+
+stickinessProperty: rox.distinct_id
+
+defaultValue:
+  valueWrittenInCode: true
+
+conditions:
+  - allOf:
+      - property:
+          name: scheduled
+          operator: is-undefined
+    flagValue: false

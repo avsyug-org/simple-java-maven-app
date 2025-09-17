@@ -1,0 +1,12 @@
+---
+apiVersion: featuremanagement.cloudbees.io/v1alpha1
+kind: flag
+
+flag: headerStringColor
+flagType: string
+description: String color values
+labels:
+
+availableValues:
+
+isPermanent: false

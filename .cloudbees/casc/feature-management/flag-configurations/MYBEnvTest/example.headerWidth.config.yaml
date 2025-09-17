@@ -1,0 +1,29 @@
+---
+apiVersion: featuremanagement.cloudbees.io/v1alpha1
+kind: flag-configuration
+
+flag: example.headerWidth
+
+enabled: false
+
+stickinessProperty: rox.distinct_id
+
+defaultValue:
+  valueWrittenInCode: true
+
+conditions:
+  - allOf:
+      - property:
+          name: rox.screen_height
+          operator: eq
+          operands:
+            - 2
+    flagValue:
+      valueWrittenInCode: true
+  - allOf:
+      - property:
+          name: Internalusers
+          operator: ne
+          operands:
+            - tesyt
+    flagValue: 100

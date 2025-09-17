@@ -1,0 +1,15 @@
+---
+apiVersion: featuremanagement.cloudbees.io/v1alpha1
+kind: target-group
+
+name: targetGroup1
+
+description: Premium users are subscribed at tier 1
+
+conditions:
+  allOf:
+    - property:
+        name: Internalusers
+        operator: regex
+        operands:
+            - hello

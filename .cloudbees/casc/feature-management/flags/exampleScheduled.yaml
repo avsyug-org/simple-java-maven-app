@@ -1,0 +1,13 @@
+---
+apiVersion: featuremanagement.cloudbees.io/v1alpha1
+kind: flag
+
+flag: exampleScheduled
+flagType: string
+description: Scheduled release
+labels:
+
+availableValues:
+  - none
+
+isPermanent: false
