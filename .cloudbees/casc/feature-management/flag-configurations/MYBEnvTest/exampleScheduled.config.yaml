@@ -10,4 +10,10 @@ stickinessProperty: rox.distinct_id
 
 defaultValue: none
 
-conditions: []
+conditions:
+  - allOf:
+      - property:
+          name: Premium
+          operator: is-true
+    flagValue:
+      valueWrittenInCode: true
