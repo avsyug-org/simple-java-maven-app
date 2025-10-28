@@ -6,7 +6,7 @@ flag: example.headerColor
 flagType: string
 description: ""
 labels:
-  - two
+  - one
 
 availableValues:
   - myFreeTextValue
