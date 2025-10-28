@@ -4,8 +4,9 @@ kind: flag
 
 flag: example.headerColor
 flagType: string
-description: 
+description: ""
 labels:
+  - two
 
 availableValues:
   - myFreeTextValue
