@@ -4,11 +4,12 @@ kind: flag
 
 flag: example.headerWidth
 flagType: number
-description: 
+description: ""
 labels:
+  - one
 
 availableValues:
-  - 800
-  - 100
+  - "800"
+  - "100"
 
 isPermanent: false
