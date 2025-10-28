@@ -6,9 +6,7 @@ flag: example.headerWidth
 flagType: number
 description: ""
 labels:
-  - two
-  - three
-  - one
+  - aaaaaaaaaaaaaaaaaaaaaa
 
 availableValues:
   - "800"
