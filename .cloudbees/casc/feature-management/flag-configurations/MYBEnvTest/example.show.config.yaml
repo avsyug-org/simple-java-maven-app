@@ -16,4 +16,9 @@ conditions:
       - property:
           name: Monthlysubscription
           operator: is-true
+      - property:
+          name: rox.app.release
+          operator: in-array
+          operands:
+            - hello
     flagValue: false
