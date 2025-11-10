@@ -12,7 +12,7 @@ defaultValue:
   valueWrittenInCode: true
 
 conditions:
-  - anyOf:
+  - allOf:
       - property:
           name: Monthlysubscription
           operator: is-true
@@ -21,4 +21,7 @@ conditions:
           operator: in-array
           operands:
             - hello
+      - property:
+          name: Test prop fmdemo
+          operator: is-undefined
     flagValue: false
