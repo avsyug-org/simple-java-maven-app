@@ -12,7 +12,7 @@ defaultValue:
   valueWrittenInCode: true
 
 conditions:
-  - allOf:
+  - anyOf:
       - property:
           name: Monthlysubscription
           operator: is-true
