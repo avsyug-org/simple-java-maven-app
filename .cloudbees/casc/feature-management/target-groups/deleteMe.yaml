@@ -1,0 +1,13 @@
+---
+apiVersion: featuremanagement.cloudbees.io/v1alpha1
+kind: target-group
+
+name: deleteMe
+
+description: 
+
+conditions:
+  allOf:
+    - property:
+        name: Test prop fmdemo
+        operator: is-undefined
